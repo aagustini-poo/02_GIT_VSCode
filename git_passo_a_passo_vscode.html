@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0056)https://www.inf.pucrs.br/flash/progoo/aulas/02_GIT_Idea/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="http://www.nongnu.org/elyxer/">
+<meta name="create-date" content="2018-02-21">
+<link rel="stylesheet" href="./git_passo_a_passo_vscode_files/lyx.css" type="text/css" media="all">
+<link rel="stylesheet" href="./git_passo_a_passo_vscode_files/agate.css" type="text/css" media="all">
+<script type="text/javascript" src="./git_passo_a_passo_vscode_files/highlightjava.js"></script><script type="text/javascript">hljs.initHighlightingOnLoad();</script><title>Passo a passo no IntelliJ IDEA</title>
+</head>
+<body>
+<div id="globalWrapper">
+<h1 class="title">
+Controle de Versão com Git - Programação Orientada a Objetos
+</h1>
+<h1 class="title">
+Passo a passo no VSCode
+</h1>
+<h2 class="author">
+Prof. Alexandre Agustini 
+</h2>
+<h2 class="author">
+(adaptado do material desenvolvido pelo Prof. Marcelo Cohen)
+</h2>
+<h2 class="Date">
+09/2021
+</h2>
+<div class="fulltoc">
+<div class="tocheader">
+Sumário
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Passo-1" target="new">Passo 1: Abra o seu projeto no VSCode</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-2" target="new">Passo 2: Vinculando o projeto ao controle de versão</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-3" target="new">Passo 3: Realizando alterações (<i>commit</i>)</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-4" target="new">Passo 4: Criando um repositório</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-5" target="new">Passo 5: Enviando alterações locais para o repositório remoto (<i>push</i>)</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-6" target="new">Passo 6: Gerenciando alterações feitas por outros (<i>pull</i>)</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Passo-7" target="new">Passo 7: Resolvendo conflitos</a>
+</div>
+</div>
+</div>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-1" target="new">1</a>Abrindo o projeto
+</h1>
+<ul>
+<li>
+O primeiro passo é abrir o código fonte do seu projeto no VSCode. Se estiveres no "shell" podes entrar na pasta do projeto e digitar: "code .", caso contrário apenas abra o VSCode e a seguir a pasta do seu projeto:
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo1_openFolder.jpg" alt="figure passo1_openFolder.jpg" style="max-width: 258px; max-height: 316px;">
+</div>
+</div>
+</li>
+</ul>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-2" target="new">2</a> Vinculando o projeto ao controle de versão
+</h1>
+<ol>
+<li>
+O próximo passo é associar o projeto a um sistema para controle de versão - no caso, usaremos o <i>Git</i>.
+</li>
+<li>
+    Baixe, caso ainda não esteja instalado, o pacote<i><span class="formula"> ⇒ </span> Git Extension Pack</i> (opcionalmente instale também o Git Graph):<div class="Unindented">
+    <div class="center">
+    <img class="embedded" src="./git_passo_a_passo_vscode_files/passo2_GitExtensionPack.jpg" alt="figure passo2_GitExtensionPack.jpg" style="max-width: 258px; max-height: 276px;">
+    </div>
+    </div>
+    </li>
+<li>
+No <i>Activity Bar</i> selecione <i><span class="formula"> ⇒ </span> Source Control</i> e a segir <i>Initialize Repository</i>:
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo3_initRepo.jpg" alt="figure passo3_initRepo.jpg" style="max-width: 258px; max-height: 260px;">
+</div>
+</div>
+</li>
+<li>
+Observe que todos os arquivos do projeto ficarão na aba <i>Changes</i> e <i>U</i> (Untracked), indicando que ainda não foram adicionados ao controle de versão:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo4_untracked.jpg" alt="figure passo4_untracked.jpg" style="max-width: 258px; max-height: 355px;">
+</div>
+</div>
+</li>
+<li>
+Agora devemos vincular todos os arquivos ao <i>Git. </i>Essa operação é chamada de <i>staging (git add)</i>. Podemos adicionar arquivos individuais utilizando o icone (+) ou toda a lista usando a mesma opção na aba <i>Changes</i>:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo5_add.jpg" alt="figure passo5_add.jpg" style="max-width: 258px; max-height: 260px;">
+</div>
+</div>
+</li>
+<li>
+Neste momento, os arquivos (agora na aba <i>Staged</i> e anotados com <i>A</i> (Added)) estão vinculados ao controle de versão.
+</li>
+</ol>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-3" target="new">3</a> Realizando alterações (<i>commit</i>)
+</h1>
+<ol>
+<li>
+Para registrar alterações no código do projeto (<i>git commit</i>), na aba <i>Source Control</i> preencha a mensagem de <i>commit </i>que ficará registrada no repositório. A mensagem deve ser curta, mas comentar sobre as alterações feitas. Como esse é o primeiro <i>commit</i>, deixamos “MyFlight - comit inicial”. Finalmente clique no botão <i>Commit</i>:
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo6_commit.jpg" alt="figure passo6_commit.jpg" style="max-width: 258px; max-height: 266px;">
+</div>
+</div>
+</li>
+<li>
+Repita o processo localmente, para registrar todas as alterações desejadas.
+</li>
+</ol>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-4" target="new">4</a> Criando um repositório
+</h1>
+<ol>
+<li>
+Crie um repositório, por exemplo, no <i>GitHub</i> (<a class="FlexURL" href="https://github.com/" target="new">https://github.com/</a>) ou <i>BitBucket</i> (<a class="FlexURL" href="https://bitbucket.com/" target="new">http://bitbucket.com</a>). Neste passo a passo vamos utilizar o <i>GitHub</i> (assumindo que você já se registrou):
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo7_repo.jpg" alt="figure passo7_repo.jpg" style="max-width: 581px; max-height: 134px;">
+</div>
+</div>
+</li>
+<li>
+Informe os dados do repositório. Deixe privado se não quiser que outras pessoas possam acessá-lo. É muito importante colocar uma boa descrição do projeto e adicionar uma página de <i>README</i> e um arquivo <i>.gitigore</i> em todos seus projetos (estes dois últimos não cobertos nesse passoa a passo):
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo8_repoCreate.jpg" alt="figure passo8_repoCreate.jpg" style="max-width: 610px; max-height: 643px;">
+</div>
+</div>
+</li>
+
+<li>
+    Caso você esteja trabalhando em sua máquina pessoal é possível configurar/autorizar o VSCode para fazer a criação do repositório no momento que realziar o primeiro envio enviar as alterações para o GitHub.
+<li>
+Note que ao fazer a criação do repositíorio o <i>GitHub</i> já fornece uma <i>receita de bolo</i> de como fazer o acesso ao repositório. Copie o link relativo ao endereço de <i>remote</i> do repositório criado:
+<div class="Unindented">
+    <div class="center">
+    <img class="embedded" src="./git_passo_a_passo_vscode_files/passo9_remote.jpg" alt="figure passo9_remote.jpg" style="max-width: 610px; max-height: 643px;">
+    </div>
+    </div>
+</li>
+</ol>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-5" target="new">5</a> Enviando alterações locais para o repositório remoto (<i>push</i>)
+</h1>
+<ol>
+<li>
+Para enviar as alterações ao repositório remoto, é preciso primeiro configurá-lo. 
+Inicialmente vamos vincular nosso projeto ao repositório, acesse a opção <i>Define remote</i> e digite a URL do repositório do <i>GitHub</i>, tecle <tt>Enter</tt> e em seguida digite o nome no remoto <tt>origin</tt>:
+    <div class="Unindented">
+    <div class="center">
+    <img class="embedded" src="./git_passo_a_passo_vscode_files/passo10_addRemote.jpg" alt="figure passo10_addRemote.jpg" style="max-width: 640px; max-height: 350px;">
+    </div>
+    </div>
+    <div class="Unindented">
+        <div class="center">
+        <img class="embedded" src="./git_passo_a_passo_vscode_files/passo11_addRemote2.jpg" alt="figure passo11_addRemote2.jpg" style="max-width: 640px; max-height: 350px;">
+        </div>
+        </div>
+        <div class="Unindented">
+            <div class="center">
+            <img class="embedded" src="./git_passo_a_passo_vscode_files/passo12_addRemote3.jpg" alt="figure passo12_addRemote3.jpg" style="max-width: 640px; max-height: 350px;">
+            </div>
+            </div>
+</li>
+<li>
+A seguir envie <i>Push</i> as alterações para o repositório compartilhado:</i><div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo13_push.jpg" alt="figure passo13_push.jpg" style="max-width: 500px; max-height: 300px;">
+</div>
+</div>
+</li>
+<li>
+Podes verificar no GitHub que o projeto foi publicado.
+
+</li>
+</ol>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-6" target="new">6</a> Gerenciando alterações feitas por outros (<i>pull</i>)
+</h1>
+<ol>
+<li>
+Um passo intermediário antes de continuar. Acrescente ao diretíorio raiz da sua aplicação um arquivo de nome <tt>.gitignore</tt>. Neste arquivo podemos listar um conjunto de regras de arquivos que não queremos manter no nosso repositório (por exemplo, a regra <tt>*.class</tt> informa ao <it>Git</it> que estes arquivos nao devem ser mantidos no repositório. Sugestão - use o site <i>
+    gitignore.io</i> (<a class="FlexURL" href="http://gitignore.io/" target="new">http://gitignore.io/</a>) para gerar o conteúdo do seu arquivo:
+
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo14_gitignore.jpg" alt="figure passo14_gitignore.jpg" style="max-width: 661px; max-height: 327px;">
+</div>
+</div>
+</li>
+<li>
+Voltando ao <tt>pull</tt>, primeiro acrescente os métodos <i>adicionar</i> e <i>buscarPorCodigo</i> na classe<i> GerenciadorCias</i>:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo15_changes.jpg" alt="figure passo15_changes.jpg" style="max-width: 640px; max-height: 550px;">
+</div>
+</div>
+</li>
+<li>
+Faça <i>commit</i> da forma mostrada anteriormente, digitando a mensagem de <i>commit</i> desejada (note que será necessário, antes, adicionar o arquivo <i>.gitignore</i> ao sistema de controle de versões, além do arquivo modificado <i>GerenciadorCias.java</i>), seguida de um <i>push</i> para atualizar também o projeto no <i>GitHub</i>.
+</li>
+<li>
+Agora vamos simular que outra pessoa fez uma alteração no mesmo código. Para tanto, abra a página do seu repositório no <i>GitHub</i>, navegue pela estrutura de diretórios e selecione o arquivo <i>GerenciadorCias.java</i>, a seguir clique no ícone de <i>edição</i>:
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo16_edit.jpg" alt="figure passo16_edit.jpg" style="max-width: 1000px; max-height: 584px;">
+</div>
+</div>
+</li>
+<li>
+Troque o código do método <i>pesquisarPorCodigo</i> pelo seguinte, que usa o comando <i>for..each</i>. A seguir, pressione o botão<i> Commit</i>:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo17_webchanges.jpg" alt="figure passo17_webchanges.jpg" style="max-width: 960px; max-height: 670px;">
+</div>
+</div>
+</li>
+<li>
+De volta no <i>VSCode</i>... em seguida o editor irá <i>perceber</i> que a versão local não é aquela do remoto e irá sugerir que seja realizado um <tt>pull</tt> (veja que o <i>GitGraph</i> também indica esssa situação).
+ </i>Selecione a opção <i>pull</i> para atualizar sincronizar as versões (abra o arquivo <i>GerenciadorCias.java</i> e note que o mesmo foi atualizado): 
+ <div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo18_pull.jpg" alt="figure passo18_pull.jpg" style="max-width: 554px; max-height: 324px;">
+</div>
+</div>
+</li>
+</ol>
+<h1 class="Passo">
+<a class="toc" name="toc-Passo-7" target="new">7</a> Resolvendo conflitos
+</h1>
+<ol>
+<li>
+Ao realizar a operação de <i>pull</i>, pode haver conflitos, ou seja, alterações que foram feitas por ambos no <b>mesmo</b> <b>trecho</b> <b>de</b> <b>código</b>. Nesse caso, o <i>Git</i> não saberá como resolver e exigirá uma intervenção do usuário. Para entender isso, edite novamente o arquivo <i>GerenciadorCias.java</i> no <i>GitHub</i> (siga os passos anteriores), e altere da seguinte forma, desfazendo a modificação anterior e fazendo novamente <i>Commit</i>:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo19_conflito1.jpg" alt="figure passo19_conflito1.jpg" style="max-width: 916px; max-height: 246px;">
+</div>
+</div>
+</li>
+<li>
+Agora, no <i>VSCode</i>, altere o código de forma um pouco diferente e tente fazer <i>commit</i>+<i>push</i>. Por exemplo, documente o código do método <i>buscarPorCodigo</i> da seguinte forma (<i>JavaDoc</i>):<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo19_conflito2.jpg" alt="figure passo19_conflito2.jpg" style="max-width: 640px; max-height: 320;">
+</div>
+</div>
+</li>
+<li>
+Observe que o <i>push</i> é <b>rejeitado</b>, uma vez que o mesmo trecho foi editado em dois locais diferentes. Para resolver, clique no botão <i>Merge</i>:<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo20_rejected.jpg" alt="figure passo20_rejected.jpg" style="max-width: 545px; max-height: 298px;">
+</div>
+</div>
+</li>
+<li>
+Feche a janela e siga a orientação de realizar um <i>pull</i> antes de realizar o <i>push</i>. A seguinte janela é apresentada. Nela, você pode escolher editar o arquivo onde houve conflito, decidindo oque deve ser mantido ou não. Note que o <i>VSCode</i> já sugere uma mensagem de <i>commit</i>, para após realizares as alterações. 
+<div class="Unindented">
+<div class="center">
+<img class="embedded" src="./git_passo_a_passo_vscode_files/passo21_merge.jpg" alt="figure passo21_merge.jpg" style="max-width: 707px; max-height: 377px;">
+</div>
+</div>
+</li>
+<li>
+Após resolver o(s) conflito(s), será necessário fazer um novo <i>commit</i> seguido de um <i>push</i>.
+</li>
+</ol>
+<hr class="footer">
+<div class="footer" id="generated-by">
+Document (original) generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2018-02-21T17:56:51.466309</span>
+</div>
+</div>
+<script defer="" src="./git_passo_a_passo_vscode_files/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;6865e9d7dc70f6e8&quot;,&quot;token&quot;:&quot;e574ebd03d434993bfcf28088123cf56&quot;,&quot;version&quot;:&quot;2021.8.1&quot;,&quot;si&quot;:10}"></script>
+
+
+</body></html>
